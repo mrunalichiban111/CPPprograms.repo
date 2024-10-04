@@ -4,21 +4,23 @@ using namespace std;
 int main() {
     int T,num;
     cin>>T;
-    int N[T];
-    vector<int> numbers;
+    string S[T];
     for(int i=0;i<T;i++){
-        for(int k=0;k<3;k++){
-            cin>>num;
-            numbers.push_back(num);
+        int N,x=0;
+        cin>>N;
+        if(N==0){
+            S[i]="Alice";
         }
-        if((numbers[1]-numbers[0])-(numbers[2]-numbers[1])){
-            N[i]=0;
+        else if((N==1) || (N==4) || (N==10)){
+            S[i]="Alice";
         }
-        else{
-            N[i]=1;
+        else if((N==2) || (N==3) || (N==5) || (N==6) || (N==7) || (N==8) || (N==9)){
+            S[i]="Bob";
         }
-    }
-    for(int j=0;j<T;j++){
-        cout<<N[j]<<"\n";
-    }
+        
+}
+for(int j=0;j<T;j++){
+    cout<<S[j]<<"\n";
+}
+return 0;
 }
